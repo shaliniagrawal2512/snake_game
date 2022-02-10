@@ -16,7 +16,7 @@ class Snake:
             new_x= self.segments[seg_num-1].xcor()
             new_y= self.segments[seg_num-1].ycor()
             self.segments[seg_num].goto(new_x, new_y)
-        self.head.forward(10)
+        self.head.forward(20)
     def turn_up(self):
         if self.head.heading() != 270:
             self.segments[0].setheading(90)
@@ -34,6 +34,7 @@ class Snake:
         new_turtle= Turtle(shape="square")
         new_turtle.penup()
         new_turtle.speed("fastest")
+        new_turtle.shapesize(stretch_len=0.7,stretch_wid=0.7)
         new_turtle.color("white")
         new_turtle.goto(position)
         self.segments.append(new_turtle) 

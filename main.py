@@ -25,9 +25,9 @@ screen.onkey(key="Right", fun=snake.turn_right)
 is_game_on=True
 while is_game_on:
     screen.update()
-    time.sleep(0.07)
+    time.sleep(0.09)
     snake.move()
-    if snake.head.distance(food)< 12:
+    if snake.head.distance(food)< 16:
         food.new_food()
         score.increase_score( )
         snake.extend(snake.segments[-1].position())
